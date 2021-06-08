@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="a"></label><input type="text" id="a" placeholder="1"/>
+    <label for="b"></label><input type="text" id="b" placeholder="2"/>
+    <br>
+    <button id="c">Addition(+)</button>
+    <button id="d">Addition(-)</button>
+    <button id="e">Addition(*)</button>
+    <button id="f">Addition(/)</button>
+
+</form>
+<script>
+    let value1;
+    value1= document.getElementById("a")
+    value1.addEventListener("change",onchange1)
+    function onchange1() {
+        getvalue1 = parseInt(document.getElementById("a").value)
+    }
+    let value2;
+    value2= document.getElementById("b")
+    value2.addEventListener("change",onchange2)
+    function onchange2() {
+        getvalue2 = parseInt(document.getElementById("b").value)
+    }
+    convert1= document.getElementById("c")
+    convert1.addEventListener("click",clickconvert1)
+    function clickconvert1(){
+        add=getvalue1+getvalue2
+        document.write("Tổng của a và b  =" +add)
+    }
+    convert2= document.getElementById("d")
+    convert2.addEventListener("click",clickconvert2)
+    function clickconvert2(){
+        minus=getvalue1-getvalue2
+        document.write("Hiệu của a và b  =" +minus)
+    }
+    convert3= document.getElementById("e")
+    convert3.addEventListener("click",clickconvert3)
+    function clickconvert3(){
+        multiply=getvalue1*getvalue2
+        document.write("Tích của a và b  =" +multiply)
+    }
+    convert4= document.getElementById("f")
+    convert4.addEventListener("click",clickconvert4)
+    function clickconvert4(){
+        division=getvalue1/getvalue2
+        document.write("Thương của a và b  =" +division)
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
